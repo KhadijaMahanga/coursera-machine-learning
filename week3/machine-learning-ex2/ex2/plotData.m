@@ -11,11 +11,13 @@ figure; hold on;
 %               2D plot, using the option 'k+' for the positive
 %               examples and 'ko' for the negative examples.
 %
+% Find Indices of Positive and Negative Examples
+positive_points = find(y==1); negative_points = find(y == 0);
 
 
-
-
-
+%
+plot(X(positive_points, 1), X(positive_points, 2), 'k+','LineWidth', 2, 'MarkerSize', 7);
+plot(X(negative_points, 1), X(negative_points, 2), 'ko', 'MarkerFaceColor', 'y', 'MarkerSize', 7);
 
 
 
